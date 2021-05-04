@@ -27,7 +27,20 @@ namespace POS
             if (e.KeyChar == (char)Keys.Return)
 
             {
-                txtBx_Barcode.Text = "";
+                try
+                {
+                    API.getItemForSale(txtBx_Barcode.Text);
+                    txtBx_Barcode.Text = "";
+                    SaleItem item = new SaleItem();
+                    item.Dock = DockStyle.Top;
+                    Items_pnl.Controls.Add(item);
+
+                }
+                catch
+                {
+                    txtBx_Barcode.Text = "";
+
+                }
             }
         }
 

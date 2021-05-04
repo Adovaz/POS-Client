@@ -76,9 +76,11 @@ namespace POS
             // 
             // Items_pnl
             // 
+            this.Items_pnl.AutoScroll = true;
             this.Items_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Items_pnl.Location = new System.Drawing.Point(10, 48);
             this.Items_pnl.Name = "Items_pnl";
+            this.Items_pnl.Padding = new System.Windows.Forms.Padding(10);
             this.Items_pnl.Size = new System.Drawing.Size(585, 441);
             this.Items_pnl.TabIndex = 4;
             // 
