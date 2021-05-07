@@ -29,7 +29,7 @@ namespace POS
             {
                 try
                 {
-                    API.getItemForSale(txtBx_Barcode.Text);
+                    Product tmp = API.getItemForSale(txtBx_Barcode.Text);
                     txtBx_Barcode.Text = "";
                     SaleItem item = new SaleItem();
                     item.Dock = DockStyle.Top;
