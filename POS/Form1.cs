@@ -10,12 +10,7 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public class Globals
-    {
-        public static int branchID = 1;
-        public static int staffID;
-        public static string remeber_token;
-    }
+
     public partial class POS : Form
     {
         public POS()
@@ -25,5 +20,11 @@ namespace POS
             sale.Dock = DockStyle.Fill;
             Sales_Pnl.Controls.Add(sale);
         }
+    }
+    public class Globals
+    {
+        public static int branchID = 1;
+        public static int staffID;
+        public static string remeber_token;
     }
 }

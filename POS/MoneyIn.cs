@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS
 {
-    public partial class SaleItem : UserControl
+    public partial class MoneyIn : Form
     {
-        public SaleItem()
+        public MoneyIn()
         {
             InitializeComponent();
         }
