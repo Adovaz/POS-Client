@@ -43,9 +43,12 @@ namespace POS
         {
             try
             {
-
+                Tuple<Product, ProductVariation> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
                 txtBx_Barcode.Text = "";
+                Product tmpProduct = tmpItem.Item1;
+                ProductVariation tmpVariation = tmpItem.Item2;
                 SaleItem item = new SaleItem();
+                item.name = tmpProduct.name + "-" + tmpVariation.name;
                 item.Dock = DockStyle.Top;
                 Items_pnl.Controls.Add(item);
 

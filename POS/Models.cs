@@ -20,6 +20,7 @@ namespace POS
 
 
     }
+
     class Product
     {
         public int id;

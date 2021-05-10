@@ -16,5 +16,10 @@ namespace POS
         {
             InitializeComponent();
         }
+        public string name
+        {
+            get { return lbl_itemName.Text; }
+            set { lbl_itemName.Text = value; }
+        }
     }
 }
