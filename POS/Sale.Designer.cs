@@ -33,31 +33,31 @@ namespace POS
             this.txtBx_Barcode = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Panel6 = new System.Windows.Forms.Panel();
-            this.Functions_pnl = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.ClearButton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.Items_pnl = new System.Windows.Forms.Panel();
-            this.lbl_totalItemPrice_head = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbl_itemName_head = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_brcd_head = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.lbl_itemPrice_head = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.lbl_totalItemPrice_head = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.lbl_qty_head = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Functions_pnl = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ClearButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.Panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Sale_Label
@@ -105,35 +105,14 @@ namespace POS
             this.Panel6.Size = new System.Drawing.Size(585, 441);
             this.Panel6.TabIndex = 4;
             // 
-            // Functions_pnl
+            // Items_pnl
             // 
-            this.Functions_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Functions_pnl.Location = new System.Drawing.Point(10, 489);
-            this.Functions_pnl.Name = "Functions_pnl";
-            this.Functions_pnl.Size = new System.Drawing.Size(585, 100);
-            this.Functions_pnl.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtBx_Barcode);
-            this.panel2.Controls.Add(this.ClearButton);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(10, 10);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 38);
-            this.panel2.TabIndex = 2;
-            // 
-            // ClearButton
-            // 
-            this.ClearButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ClearButton.Location = new System.Drawing.Point(510, 0);
-            this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(75, 38);
-            this.ClearButton.TabIndex = 2;
-            this.ClearButton.Text = "Clear";
-            this.ClearButton.UseVisualStyleBackColor = true;
-            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
-            this.ClearButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
+            this.Items_pnl.AutoScroll = true;
+            this.Items_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Items_pnl.Location = new System.Drawing.Point(0, 27);
+            this.Items_pnl.Name = "Items_pnl";
+            this.Items_pnl.Size = new System.Drawing.Size(583, 412);
+            this.Items_pnl.TabIndex = 1;
             // 
             // panel3
             // 
@@ -148,26 +127,6 @@ namespace POS
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(583, 27);
             this.panel3.TabIndex = 0;
-            // 
-            // Items_pnl
-            // 
-            this.Items_pnl.AutoScroll = true;
-            this.Items_pnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Items_pnl.Location = new System.Drawing.Point(0, 27);
-            this.Items_pnl.Name = "Items_pnl";
-            this.Items_pnl.Size = new System.Drawing.Size(583, 412);
-            this.Items_pnl.TabIndex = 1;
-            // 
-            // lbl_totalItemPrice_head
-            // 
-            this.lbl_totalItemPrice_head.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbl_totalItemPrice_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_totalItemPrice_head.Location = new System.Drawing.Point(0, 0);
-            this.lbl_totalItemPrice_head.Name = "lbl_totalItemPrice_head";
-            this.lbl_totalItemPrice_head.Size = new System.Drawing.Size(91, 27);
-            this.lbl_totalItemPrice_head.TabIndex = 0;
-            this.lbl_totalItemPrice_head.Text = "Total";
-            this.lbl_totalItemPrice_head.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel4
             // 
@@ -218,32 +177,6 @@ namespace POS
             this.panel7.Size = new System.Drawing.Size(81, 27);
             this.panel7.TabIndex = 9;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.lbl_totalItemPrice_head);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(391, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(91, 27);
-            this.panel8.TabIndex = 10;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.lbl_qty_head);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(482, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(46, 27);
-            this.panel9.TabIndex = 11;
-            // 
-            // panel10
-            // 
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(528, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(55, 27);
-            this.panel10.TabIndex = 12;
-            // 
             // lbl_itemPrice_head
             // 
             this.lbl_itemPrice_head.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -254,6 +187,35 @@ namespace POS
             this.lbl_itemPrice_head.TabIndex = 0;
             this.lbl_itemPrice_head.Text = "Price";
             this.lbl_itemPrice_head.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.lbl_totalItemPrice_head);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(391, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(91, 27);
+            this.panel8.TabIndex = 10;
+            // 
+            // lbl_totalItemPrice_head
+            // 
+            this.lbl_totalItemPrice_head.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbl_totalItemPrice_head.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalItemPrice_head.Location = new System.Drawing.Point(0, 0);
+            this.lbl_totalItemPrice_head.Name = "lbl_totalItemPrice_head";
+            this.lbl_totalItemPrice_head.Size = new System.Drawing.Size(91, 27);
+            this.lbl_totalItemPrice_head.TabIndex = 0;
+            this.lbl_totalItemPrice_head.Text = "Total";
+            this.lbl_totalItemPrice_head.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.lbl_qty_head);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(482, 0);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(46, 27);
+            this.panel9.TabIndex = 11;
             // 
             // lbl_qty_head
             // 
@@ -266,6 +228,44 @@ namespace POS
             this.lbl_qty_head.TabIndex = 0;
             this.lbl_qty_head.Text = "Qty";
             // 
+            // panel10
+            // 
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(528, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(55, 27);
+            this.panel10.TabIndex = 12;
+            // 
+            // Functions_pnl
+            // 
+            this.Functions_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Functions_pnl.Location = new System.Drawing.Point(10, 489);
+            this.Functions_pnl.Name = "Functions_pnl";
+            this.Functions_pnl.Size = new System.Drawing.Size(585, 100);
+            this.Functions_pnl.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtBx_Barcode);
+            this.panel2.Controls.Add(this.ClearButton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(585, 38);
+            this.panel2.TabIndex = 2;
+            // 
+            // ClearButton
+            // 
+            this.ClearButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ClearButton.Location = new System.Drawing.Point(510, 0);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.Size = new System.Drawing.Size(75, 38);
+            this.ClearButton.TabIndex = 2;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            this.ClearButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
+            // 
             // Sale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,8 +277,6 @@ namespace POS
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
             this.panel1.ResumeLayout(false);
             this.Panel6.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -286,6 +284,8 @@ namespace POS
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

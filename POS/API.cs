@@ -9,13 +9,12 @@ namespace POS
     //Functions for API here
     class API
     {
-        public static Tuple<Product, ProductVariation>getItemForSale(string barcode)
+        public static void getItemForSale(string barcode)
         {
             Product tmpProduct = new Product();
             ProductVariation tmpVariation = new ProductVariation();
 
             (Product product, ProductVariation variation) Item = (tmpProduct, tmpVariation);
-            return (Item);
         }
     }
 }

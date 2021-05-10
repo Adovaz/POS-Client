@@ -29,18 +29,30 @@ namespace POS
             {
                 try
                 {
-                    Product tmp = API.getItemForSale(txtBx_Barcode.Text);
-                    txtBx_Barcode.Text = "";
-                    SaleItem item = new SaleItem();
-                    item.Dock = DockStyle.Top;
-                    Items_pnl.Controls.Add(item);
-
+                    newitem();
                 }
                 catch
                 {
                     txtBx_Barcode.Text = "";
 
                 }
+            }
+        }
+
+        private void newitem()
+        {
+            try
+            {
+
+                txtBx_Barcode.Text = "";
+                SaleItem item = new SaleItem();
+                item.Dock = DockStyle.Top;
+                Items_pnl.Controls.Add(item);
+
+            }
+            catch
+            {
+                txtBx_Barcode.Text = "";
             }
         }
 
