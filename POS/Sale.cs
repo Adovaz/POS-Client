@@ -29,9 +29,9 @@ namespace POS
             {
                 try
                 {
-                    Tuple<Product, ProductVariation> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
-                    Product tmpProduct = tmpItem.Item1;
-                    ProductVariation tmpVariation = tmpItem.Item2;
+                    Tuple<ProductObj, ProductVariationObj> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
+                    ProductObj tmpProduct = tmpItem.Item1;
+                    ProductVariationObj tmpVariation = tmpItem.Item2;
                     txtBx_Barcode.Text = "";
                     SaleItem item = new SaleItem();
                     item.Dock = DockStyle.Top;

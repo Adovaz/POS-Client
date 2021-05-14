@@ -25,16 +25,16 @@ namespace POS
             }
         }
 
-        public static Tuple<Product, ProductVariation> getItemForSale(string barcode)
+        public static Tuple<ProductObj, ProductVariationObj> getItemForSale(string barcode)
         {
             string url = @"https://www.google.com";
 
             MessageBox.Show(Get(url));
 
-            Product tmpProduct = new Product();
-            ProductVariation tmpVariation = new ProductVariation();
+            ProductObj tmpProduct = new ProductObj();
+            ProductVariationObj tmpVariation = new ProductVariationObj();
 
-            return new Tuple<Product, ProductVariation>(tmpProduct, tmpVariation);
+            return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
         }
     }
 }

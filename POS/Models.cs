@@ -16,7 +16,7 @@ namespace POS
     class ProductVariationObj
     {
         public int id;
-        public ProductObj product_variation;
+        public int product_variation_id;
         public string name;
         public string description;
         public double cost;
@@ -37,8 +37,7 @@ namespace POS
 
     class TransactionObj
     {
-        public StaffObj staff;
-
+        public int staff_id;
         public Array product_variaiton_id;
         public Array quantities;
     }
@@ -46,7 +45,7 @@ namespace POS
     class SaleObj
     {
         public int transaction_id;
-        public ProductVariationObj variations;
+        public int variation;
         public int quantity;
     }
 }
