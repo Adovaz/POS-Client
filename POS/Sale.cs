@@ -16,12 +16,13 @@ namespace POS
         {
             InitializeComponent();
         }
-
+        pub
         private void BarcodeCapture(object sender, KeyEventArgs e)
         {
             //txtBx_Barcode.Text = txtBx_Barcode.Text + e.KeyCode.ToString();
         }
 
+        //Adds item on enter
         private void CheckEnterKeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
@@ -30,10 +31,11 @@ namespace POS
                 try
                 {
                     Tuple<ProductObj, ProductVariationObj> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
-                    ProductObj tmpProduct = tmpItem.Item1;
-                    ProductVariationObj tmpVariation = tmpItem.Item2;
+                    ProductObj Product = tmpItem.Item1;
+                    ProductVariationObj Variation = tmpItem.Item2;
                     txtBx_Barcode.Text = "";
                     SaleItem item = new SaleItem();
+                    item.lbl_itemName = ;
                     item.Dock = DockStyle.Top;
                     Items_pnl.Controls.Add(item);
 

@@ -16,7 +16,7 @@ namespace POS
     class ProductVariationObj
     {
         public int id;
-        public int product_variation_id;
+        public int product_id;
         public string name;
         public string description;
         public double cost;
