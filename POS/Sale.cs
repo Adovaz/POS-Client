@@ -16,7 +16,7 @@ namespace POS
         {
             InitializeComponent();
         }
-        pub
+
         private void BarcodeCapture(object sender, KeyEventArgs e)
         {
             //txtBx_Barcode.Text = txtBx_Barcode.Text + e.KeyCode.ToString();
@@ -30,15 +30,13 @@ namespace POS
             {
                 try
                 {
-                    Tuple<ProductObj, ProductVariationObj> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
-                    ProductObj Product = tmpItem.Item1;
-                    ProductVariationObj Variation = tmpItem.Item2;
+                   Tuple<ProductObj, ProductVariationObj> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
+                   // ProductObj Product = tmpItem.Item1;
+                   // ProductVariationObj Variation = tmpItem.Item2;
                     txtBx_Barcode.Text = "";
                     SaleItem item = new SaleItem();
-                    item.lbl_itemName = ;
                     item.Dock = DockStyle.Top;
                     Items_pnl.Controls.Add(item);
-
                 }
                 catch
                 {
