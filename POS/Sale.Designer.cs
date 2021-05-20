@@ -47,10 +47,10 @@ namespace POS
             this.lbl_qty_head = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Functions_pnl = new System.Windows.Forms.Panel();
+            this.lbl_total = new System.Windows.Forms.Label();
             this.btn_Process = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ClearButton = new System.Windows.Forms.Button();
-            this.lbl_total = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -249,6 +249,17 @@ namespace POS
             this.Functions_pnl.Size = new System.Drawing.Size(585, 100);
             this.Functions_pnl.TabIndex = 3;
             // 
+            // lbl_total
+            // 
+            this.lbl_total.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.Location = new System.Drawing.Point(429, 0);
+            this.lbl_total.Name = "lbl_total";
+            this.lbl_total.Size = new System.Drawing.Size(156, 100);
+            this.lbl_total.TabIndex = 1;
+            this.lbl_total.Text = "Total: 0.00";
+            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btn_Process
             // 
             this.btn_Process.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -283,17 +294,6 @@ namespace POS
             this.ClearButton.UseVisualStyleBackColor = true;
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             this.ClearButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
-            // 
-            // lbl_total
-            // 
-            this.lbl_total.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_total.Location = new System.Drawing.Point(429, 0);
-            this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(156, 100);
-            this.lbl_total.TabIndex = 1;
-            this.lbl_total.Text = "Total: 0.00";
-            this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Sale
             // 

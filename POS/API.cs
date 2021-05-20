@@ -16,6 +16,12 @@ namespace POS
         //Universal get function
         public static string Get(string uri)
         {
+            WebClient client = new WebClient();
+            string downloadString = client.DownloadString(uri);
+            MessageBox.Show(downloadString);
+
+            return downloadString;
+
             MessageBox.Show("Start of get");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
             MessageBox.Show("Request thing");
@@ -34,14 +40,15 @@ namespace POS
         {
             string variation_url = @"https://localhost/productvariations/barcode/"+barcode;
             MessageBox.Show(variation_url);
-            string tmp_json_variation = Get("https://localhost/stock/all");
+            string tmp_json_variation = Get(variation_url);
             MessageBox.Show("hete", tmp_json_variation);
-            ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationObj>(tmp_json_variation);
+            ProductVariationObj tmpVariation = new ProductVariationObj();
+                //JsonConvert.DeserializeObject<ProductVariationObj>(tmp_json_variation);
             MessageBox.Show("here");
+            
+            string product_url = @"https://localhost/product/get/"+tmpVariation.product_id;
 
-            string product = @"https://localhost/product/get/"+tmpVariation.product_id;
-            string tmp_json_product = Get(product);
-            ProductObj tmpProduct = JsonConvert.DeserializeObject<ProductObj>(tmp_json_product); ;
+            ProductObj tmpProduct = new ProductObj();
            
 
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
