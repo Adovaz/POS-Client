@@ -75,19 +75,27 @@ namespace POS
             saleForm.Show();
         }
 
-        public void UpdateTotal()
+        public double Total
         {
-            lbl_total.Text = "Total: " + GetTotal().ToString();
+            get
+            {
+                double working_total = 0;
+                foreach (SaleItem sale in pnl_items.Controls)
+                {
+                    working_total += (sale.productAttatched.retail_price * sale.quantity);
+                }
+                return working_total;
+            }
+            set
+            {
+                lbl_total.Text = "$ " + value;
+            }
         }
 
-        public double GetTotal()
+        public void UpdateTotal()
         {
-            double working_total = 0;
-            foreach (SaleItem sale in pnl_items.Controls)
-            {
-                working_total += (sale.productAttatched.retail_price * sale.quantity);
-            }
-            return working_total;
+            double total = Total;
+            Total = total;
         }
 
         private void ClearButton_Click(object sender, EventArgs e)

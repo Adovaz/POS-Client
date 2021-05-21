@@ -15,6 +15,8 @@ namespace POS
         public MoneyIn()
         {
             InitializeComponent();
+            
         }
+        public double Due;
     }
 }

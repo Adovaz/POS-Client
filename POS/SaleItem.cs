@@ -78,5 +78,10 @@ namespace POS
         {
             total = (quantity * productAttatched.retail_price).ToString();
         }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+        }
     }
 }

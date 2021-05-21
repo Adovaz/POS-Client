@@ -40,7 +40,7 @@ namespace POS
             this.panel5 = new System.Windows.Forms.Panel();
             this.numUD_Quantity = new System.Windows.Forms.NumericUpDown();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -55,7 +55,7 @@ namespace POS
             this.panel1.Controls.Add(this.lbl_itemName);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(324, 33);
             this.panel1.TabIndex = 0;
@@ -78,7 +78,7 @@ namespace POS
             this.panel2.Controls.Add(this.lbl_desc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(324, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(185, 33);
             this.panel2.TabIndex = 1;
@@ -101,7 +101,7 @@ namespace POS
             this.panel3.Controls.Add(this.lbl_itemPrice);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(509, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(108, 33);
             this.panel3.TabIndex = 2;
@@ -123,7 +123,7 @@ namespace POS
             this.panel4.Controls.Add(this.lbl_totalItemPrice);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(617, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(121, 33);
             this.panel4.TabIndex = 4;
@@ -146,7 +146,7 @@ namespace POS
             this.panel5.Controls.Add(this.numUD_Quantity);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(738, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(61, 33);
             this.panel5.TabIndex = 5;
@@ -156,7 +156,7 @@ namespace POS
             this.numUD_Quantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numUD_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numUD_Quantity.Location = new System.Drawing.Point(0, 0);
-            this.numUD_Quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numUD_Quantity.Margin = new System.Windows.Forms.Padding(4);
             this.numUD_Quantity.Name = "numUD_Quantity";
             this.numUD_Quantity.Size = new System.Drawing.Size(61, 34);
             this.numUD_Quantity.TabIndex = 0;
@@ -164,26 +164,27 @@ namespace POS
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.btn_delete);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(799, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(1);
             this.panel6.Size = new System.Drawing.Size(73, 33);
             this.panel6.TabIndex = 6;
             // 
-            // button1
+            // btn_delete
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1, 1);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "x";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_delete.Location = new System.Drawing.Point(1, 1);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(71, 31);
+            this.btn_delete.TabIndex = 0;
+            this.btn_delete.Text = "x";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // SaleItem
             // 
@@ -196,7 +197,7 @@ namespace POS
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SaleItem";
             this.Size = new System.Drawing.Size(872, 33);
             this.panel1.ResumeLayout(false);
@@ -223,6 +224,6 @@ namespace POS
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown numUD_Quantity;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_delete;
     }
 }
