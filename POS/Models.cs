@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace POS
 {
-    class StaffObj
+    public class StaffObj
     {
         public int id;
         public string name;
         public string remember_token;
     }
 
-    class ProductVariationObj
+    public class ProductVariationObj
     {
         public int id;
         public int product_id;
@@ -25,8 +25,13 @@ namespace POS
         public string barcode_1;
         public string barcode_2;
     }
+    
+    public class ProductVariationJson
+    {
+        public ProductVariationObj[] productVariation;
+    }
 
-    class ProductObj
+    public class ProductObj
     {
         public int id;
         public int product_category;
@@ -35,14 +40,19 @@ namespace POS
         public string description;
     }
 
-    class TransactionObj
+    public class ProductJson
+    {
+        public ProductObj Product;
+    }
+
+    public class TransactionObj
     {
         public int staff_id;
         public Array product_variaiton_id;
         public Array quantities;
     }
 
-    class SaleObj
+    public class SaleObj
     {
         public int transaction_id;
         public int variation;

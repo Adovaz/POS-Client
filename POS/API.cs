@@ -16,17 +16,8 @@ namespace POS
         //Universal get function
         public static string Get(string uri)
         {
-            WebClient client = new WebClient();
-            string downloadString = client.DownloadString(uri);
-            MessageBox.Show(downloadString);
-
-            return downloadString;
-
-            MessageBox.Show("Start of get");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
-            MessageBox.Show("Request thing");
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-            MessageBox.Show("ysy");
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
             using (Stream stream = response.GetResponseStream())
             using (StreamReader reader = new StreamReader(stream))
@@ -38,18 +29,15 @@ namespace POS
         //Gets Product and Variation for a sale
         public static Tuple<ProductObj, ProductVariationObj> getItemForSale(string barcode)
         {
-            string variation_url = @"https://localhost/productvariations/barcode/"+barcode;
-            MessageBox.Show(variation_url);
+            string variation_url = @"http://localhost/productvariations/barcode/"+barcode;
             string tmp_json_variation = Get(variation_url);
-            MessageBox.Show("hete", tmp_json_variation);
-            ProductVariationObj tmpVariation = new ProductVariationObj();
-                //JsonConvert.DeserializeObject<ProductVariationObj>(tmp_json_variation);
-            MessageBox.Show("here");
+            ProductVariationJson tmpVariationJson = JsonConvert.DeserializeObject<ProductVariationJson>(tmp_json_variation);
+            ProductVariationObj tmpVariation = tmpVariationJson.productVariation[0];
             
-            string product_url = @"https://localhost/product/get/"+tmpVariation.product_id;
-
-            ProductObj tmpProduct = new ProductObj();
-           
+            string product_url = @"http://localhost/products/get/"+tmpVariation.product_id;
+            string tmp_json_product = Get(product_url);
+            ProductJson tmpProductJson = JsonConvert.DeserializeObject<ProductJson>(tmp_json_product);
+            ProductObj tmpProduct = tmpProductJson.Product;
 
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
         }

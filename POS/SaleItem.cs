@@ -27,15 +27,15 @@ namespace POS
                 lbl_itemName.Text = value;
             }
         }
-        public string barcode
+        public string description
         {
             get
             {
-                return lbl_brcd.Text;
+                return lbl_desc.Text;
             }
             set
             {
-                lbl_brcd.Text = value;
+                lbl_desc.Text = value;
             }
         }
         public string price
@@ -46,7 +46,7 @@ namespace POS
             }
             set
             {
-                lbl_itemPrice.Text = value;
+                lbl_itemPrice.Text = "$" + value;
             }
         }
         public string total
@@ -57,7 +57,7 @@ namespace POS
             }
             set
             {
-                lbl_totalItemPrice.Text = value;
+                lbl_totalItemPrice.Text = "$" + value;
             }
         }
         public int quantity
@@ -70,6 +70,13 @@ namespace POS
             {
                 numUD_Quantity.Value = value;
             }
+        }
+
+        public ProductVariationObj productAttatched;
+        
+        private void TotalUpdate(object sender, EventArgs e)
+        {
+            total = (quantity * productAttatched.retail_price).ToString();
         }
     }
 }
