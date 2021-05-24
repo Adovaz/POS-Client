@@ -63,6 +63,12 @@
     <Compile Include="MoneyIn.Designer.cs">
       <DependentUpon>MoneyIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="PaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentMethod.Designer.cs">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs">
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MoneyIn.resx">
       <DependentUpon>MoneyIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentMethod.resx">
+      <DependentUpon>PaymentMethod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

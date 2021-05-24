@@ -71,8 +71,17 @@ namespace POS
 
         private void CompleteSale(object sender, EventArgs e)
         {
-            MoneyIn saleForm = new MoneyIn();
-            saleForm.Show();
+            UpdateTotal();
+            if (Total == 0)
+            {
+                MoneyIn saleForm = new MoneyIn(Total);
+                this.Enabled = false;
+                saleForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("No items to process", "ERROR");
+            }
         }
 
         public double Total

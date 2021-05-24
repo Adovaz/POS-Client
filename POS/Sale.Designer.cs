@@ -80,7 +80,7 @@ namespace POS
             this.txtBx_Barcode.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtBx_Barcode.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBx_Barcode.Location = new System.Drawing.Point(0, 0);
-            this.txtBx_Barcode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBx_Barcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtBx_Barcode.Name = "txtBx_Barcode";
             this.txtBx_Barcode.Size = new System.Drawing.Size(681, 46);
             this.txtBx_Barcode.TabIndex = 1;
@@ -94,7 +94,7 @@ namespace POS
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 92);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.panel1.Size = new System.Drawing.Size(807, 738);
@@ -107,7 +107,7 @@ namespace POS
             this.Panel6.Controls.Add(this.panel3);
             this.Panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel6.Location = new System.Drawing.Point(13, 59);
-            this.Panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel6.Margin = new System.Windows.Forms.Padding(4);
             this.Panel6.Name = "Panel6";
             this.Panel6.Size = new System.Drawing.Size(781, 544);
             this.Panel6.TabIndex = 4;
@@ -117,7 +117,7 @@ namespace POS
             this.pnl_items.AutoScroll = true;
             this.pnl_items.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_items.Location = new System.Drawing.Point(0, 33);
-            this.pnl_items.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_items.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_items.Name = "pnl_items";
             this.pnl_items.Size = new System.Drawing.Size(779, 509);
             this.pnl_items.TabIndex = 1;
@@ -132,7 +132,7 @@ namespace POS
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(779, 33);
             this.panel3.TabIndex = 0;
@@ -142,7 +142,7 @@ namespace POS
             this.panel4.Controls.Add(this.lbl_itemName_head);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(231, 33);
             this.panel4.TabIndex = 7;
@@ -164,7 +164,7 @@ namespace POS
             this.panel5.Controls.Add(this.lbl_brcd_head);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(231, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(185, 33);
             this.panel5.TabIndex = 8;
@@ -186,7 +186,7 @@ namespace POS
             this.panel7.Controls.Add(this.lbl_itemPrice_head);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel7.Location = new System.Drawing.Point(416, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(108, 33);
             this.panel7.TabIndex = 9;
@@ -208,7 +208,7 @@ namespace POS
             this.panel8.Controls.Add(this.lbl_totalItemPrice_head);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel8.Location = new System.Drawing.Point(524, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(121, 33);
             this.panel8.TabIndex = 10;
@@ -230,7 +230,7 @@ namespace POS
             this.panel9.Controls.Add(this.lbl_qty_head);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel9.Location = new System.Drawing.Point(645, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(61, 33);
             this.panel9.TabIndex = 11;
@@ -251,7 +251,7 @@ namespace POS
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel10.Location = new System.Drawing.Point(706, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(73, 33);
             this.panel10.TabIndex = 12;
@@ -262,7 +262,7 @@ namespace POS
             this.Functions_pnl.Controls.Add(this.btn_Process);
             this.Functions_pnl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Functions_pnl.Location = new System.Drawing.Point(13, 603);
-            this.Functions_pnl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Functions_pnl.Margin = new System.Windows.Forms.Padding(4);
             this.Functions_pnl.Name = "Functions_pnl";
             this.Functions_pnl.Size = new System.Drawing.Size(781, 123);
             this.Functions_pnl.TabIndex = 3;
@@ -285,7 +285,7 @@ namespace POS
             this.btn_Process.Dock = System.Windows.Forms.DockStyle.Left;
             this.btn_Process.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Process.Location = new System.Drawing.Point(0, 0);
-            this.btn_Process.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Process.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Process.Name = "btn_Process";
             this.btn_Process.Size = new System.Drawing.Size(136, 123);
             this.btn_Process.TabIndex = 0;
@@ -299,7 +299,7 @@ namespace POS
             this.panel2.Controls.Add(this.ClearButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(13, 12);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(781, 47);
             this.panel2.TabIndex = 2;
@@ -308,7 +308,7 @@ namespace POS
             // 
             this.ClearButton.Dock = System.Windows.Forms.DockStyle.Right;
             this.ClearButton.Location = new System.Drawing.Point(681, 0);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(4);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(100, 47);
             this.ClearButton.TabIndex = 2;
@@ -323,7 +323,7 @@ namespace POS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Sale_Label);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sale";
             this.Size = new System.Drawing.Size(807, 830);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
