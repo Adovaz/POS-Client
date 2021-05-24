@@ -17,6 +17,12 @@ namespace POS
             InitializeComponent();
         }
 
+        //Clears barcode box
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            txtBx_Barcode.Text = "";
+        }
+
         private void BarcodeCapture(object sender, KeyEventArgs e)
         {
             //txtBx_Barcode.Text = txtBx_Barcode.Text + e.KeyCode.ToString();
@@ -69,21 +75,23 @@ namespace POS
             }
         }
 
+        //On complete sale button, 
         private void CompleteSale(object sender, EventArgs e)
         {
             UpdateTotal();
-            if (Total == 0)
+            if (Total != 0)
             {
-                MoneyIn saleForm = new MoneyIn(Total);
+                MoneyIn saleForm = new MoneyIn(Total, this);
                 this.Enabled = false;
                 saleForm.Show();
             }
-            else
+            if (Total == 0)
             {
                 MessageBox.Show("No items to process", "ERROR");
             }
         }
 
+        //Public variable for the current sale
         public double Total
         {
             get
@@ -101,15 +109,12 @@ namespace POS
             }
         }
 
+        //Updates the current sales total
         public void UpdateTotal()
         {
             double total = Total;
             Total = total;
         }
 
-        private void ClearButton_Click(object sender, EventArgs e)
-        {
-            txtBx_Barcode.Text = "";
-        }
     }
 }

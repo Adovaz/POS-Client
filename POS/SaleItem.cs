@@ -16,6 +16,8 @@ namespace POS
         {
             InitializeComponent();
         }
+
+        //External access to text and variables
         public string name
         {
             get
@@ -72,13 +74,16 @@ namespace POS
             }
         }
 
+        //Product variaton attatched to the this item
         public ProductVariationObj productAttatched;
         
+        //Updates the induvidual items total
         private void TotalUpdate(object sender, EventArgs e)
         {
             total = (quantity * productAttatched.retail_price).ToString();
         }
 
+        //Deletes the element
         private void btn_delete_Click(object sender, EventArgs e)
         {
             this.Parent.Controls.Remove(this);

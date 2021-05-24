@@ -12,25 +12,36 @@ namespace POS
 {
     public partial class MoneyIn : Form
     {
-        public MoneyIn(double due)
+        public MoneyIn(double due, Sale current_sale)
         {
             InitializeComponent();
 
-            lbl_TotalDue.Text = "Due: " + due.ToString();
+            lbl_TotalDue.Text = "Due: " + current_sale.Total.ToString();
 
-            PaymentMethod cash = new PaymentMethod("Cash");
+            List<string> methods = new List<string>();
+            methods.Add("Debit");
+            methods.Add("Eftpos");
+            methods.Add("Giftcard");
+
+            PaymentMethod cash = new PaymentMethod();
+            cash.payment_name = "Cash: $" + string.Format("{0:N2}", Math.Round(due, 1));
             cash.Dock = DockStyle.Top;
             pnl_payments.Controls.Add(cash);
-            PaymentMethod debit = new PaymentMethod("Debit");
-            debit.Dock = DockStyle.Top;
-            pnl_payments.Controls.Add(debit);
-            PaymentMethod eftpos = new PaymentMethod("Eftpos");
-            eftpos.Dock = DockStyle.Top;
-            pnl_payments.Controls.Add(eftpos);
-            PaymentMethod giftcard = new PaymentMethod("Giftcard");
-            giftcard.Dock = DockStyle.Top;
-            pnl_payments.Controls.Add(giftcard);
 
+            foreach (string item in methods)
+            {
+                PaymentMethod newMethod = new PaymentMethod();
+                newMethod.payment_name = item;
+                newMethod.Dock = DockStyle.Top;
+                pnl_payments.Controls.Add(newMethod);
+
+            }
         }
+
+        public void UpdateDue (Sale current_sale)
+        {
+            int ongoing_due = current_sale.Total;
+        }
+        
     }
 }

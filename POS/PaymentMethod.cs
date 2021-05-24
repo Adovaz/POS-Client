@@ -12,10 +12,57 @@ namespace POS
 {
     public partial class PaymentMethod : UserControl
     {
-        public PaymentMethod(string name)
+        public PaymentMethod()
         {
             InitializeComponent();
-            btn_method.Text = name;
+
+        }
+        public string payment_name
+        {
+            get
+            {
+                return btn_method.Text;
+            }
+            set
+            {
+                btn_method.Text = value;
+            }
+        }
+
+        public int payment_box
+        {
+            get
+            {
+                try
+                {
+                    int.TryParse(txtBx_payment_method.Text, out int ret);
+                    return ret;
+
+                }
+                catch
+                {
+                    MessageBox.Show("Text is not numbers","ERROR");
+                    return 0;
+                }
+            }
+            set
+            {
+
+            }
+        }
+
+        private void txtBx_payment_method_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
