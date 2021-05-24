@@ -25,6 +25,6 @@ namespace POS
     {
         public static int branchID = 1;
         public static int staffID;
-        public static string remeber_token;
+        public static string remmeber_token;
     }
 }

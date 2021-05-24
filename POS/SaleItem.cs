@@ -12,6 +12,8 @@ namespace POS
 {
     public partial class SaleItem : UserControl
     {
+        public Sale sale;
+
         public SaleItem()
         {
             InitializeComponent();
@@ -81,6 +83,7 @@ namespace POS
         private void TotalUpdate(object sender, EventArgs e)
         {
             total = (quantity * productAttatched.retail_price).ToString();
+            sale.UpdateTotal();
         }
 
         //Deletes the element

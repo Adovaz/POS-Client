@@ -51,6 +51,7 @@ namespace POS
             this.txtBx_payment_method.Name = "txtBx_payment_method";
             this.txtBx_payment_method.Size = new System.Drawing.Size(298, 61);
             this.txtBx_payment_method.TabIndex = 1;
+            this.txtBx_payment_method.TextChanged += new System.EventHandler(this.txtBx_payment_method_TextChanged);
             this.txtBx_payment_method.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBx_payment_method_KeyPress);
             // 
             // PaymentMethod

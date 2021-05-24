@@ -12,6 +12,8 @@ namespace POS
 {
     public partial class PaymentMethod : UserControl
     {
+        public MoneyIn parent_moneyIn;
+
         public PaymentMethod()
         {
             InitializeComponent();
@@ -63,6 +65,11 @@ namespace POS
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtBx_payment_method_TextChanged(object sender, EventArgs e)
+        {
+            parent_moneyIn.UpdateDue(parent_moneyIn);
         }
     }
 }
