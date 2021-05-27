@@ -94,6 +94,13 @@ namespace POS
             }
         }
 
+        public TransactionPostJson createTransactionPost()
+        {
+            TransactionPostJson ret = new TransactionPostJson();
+            return ret;
+             
+        }
+
         public void CompleteSale(MoneyIn moneyIn)
         {
             if(moneyIn.current_due == 0)

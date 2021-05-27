@@ -52,9 +52,24 @@ namespace POS
         public Array quantities;
     }
 
-    public class TransactionJson
+    public class TransactionPostJson
     {
-
+        public double total;
+        public enum transaction_type
+        {
+            sale,
+            deposit,
+            finalise,
+        }
+        public enum payment_method
+        {
+            cash,
+            debit,
+            eftpos,
+            mastercard,
+            giftcard,
+        }
+        public Array contents;
     }
 
     public class SaleObj
