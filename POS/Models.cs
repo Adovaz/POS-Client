@@ -52,6 +52,11 @@ namespace POS
         public Array quantities;
     }
 
+    public class TransactionJson
+    {
+
+    }
+
     public class SaleObj
     {
         public int transaction_id;

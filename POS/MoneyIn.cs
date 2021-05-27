@@ -12,12 +12,16 @@ namespace POS
 {
     public partial class MoneyIn : Form
     {
-        public double ext_due;
+        public double current_due;
+        public Sale parent_sale;
+        public double init_due;
         public MoneyIn(double due, Sale current_sale)
         {
             InitializeComponent();
-            ext_due = due;
-            lbl_TotalDue.Text = "Due: " + current_sale.Total.ToString();
+            current_due = due;
+            init_due = due;
+            parent_sale = current_sale;
+            lbl_TotalDue.Text = "Due: " + string.Format("{0:N2}", current_sale.Total);
 
             List<string> methods = new List<string>();
             methods.Add("Debit");
@@ -43,14 +47,18 @@ namespace POS
 
         public void UpdateDue(MoneyIn money)
         {
-            double ongoing_due = ext_due;
             double taken = 0;
             foreach (PaymentMethod payment in money.pnl_payments.Controls)
             {
                 taken += payment.payment_box;
             }
-            lbl_TotalDue.Text = "Due: " + (ongoing_due - taken).ToString();
+            current_due = init_due - taken;
+            lbl_TotalDue.Text = "Due: " + string.Format("{0:N2}", current_due);
         }
 
+        private void btn_complete_Click(object sender, EventArgs e)
+        {
+            parent_sale.CompleteSale(this);
+        }
     }
 }

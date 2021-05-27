@@ -31,13 +31,13 @@ namespace POS
             }
         }
 
-        public int payment_box
+        public double payment_box
         {
             get
             {
                 try
                 {
-                    int.TryParse(txtBx_payment_method.Text, out int ret);
+                    double.TryParse(txtBx_payment_method.Text, out double ret);
                     return ret;
 
                 }
@@ -49,7 +49,7 @@ namespace POS
             }
             set
             {
-
+                txtBx_payment_method.Text = value.ToString();
             }
         }
 
@@ -70,6 +70,11 @@ namespace POS
         private void txtBx_payment_method_TextChanged(object sender, EventArgs e)
         {
             parent_moneyIn.UpdateDue(parent_moneyIn);
+        }
+
+        private void btn_method_Click(object sender, EventArgs e)
+        {
+            payment_box = parent_moneyIn.current_due;
         }
     }
 }

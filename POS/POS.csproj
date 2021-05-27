@@ -50,11 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="POS.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
     </Compile>
     <Compile Include="Models.cs" />
     <Compile Include="MoneyIn.cs">
@@ -83,8 +83,8 @@
     <Compile Include="SaleItem.Designer.cs">
       <DependentUpon>SaleItem.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MoneyIn.resx">
       <DependentUpon>MoneyIn.cs</DependentUpon>

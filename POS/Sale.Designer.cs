@@ -291,7 +291,7 @@ namespace POS
             this.btn_Process.TabIndex = 0;
             this.btn_Process.Text = "Process";
             this.btn_Process.UseVisualStyleBackColor = false;
-            this.btn_Process.Click += new System.EventHandler(this.CompleteSale);
+            this.btn_Process.Click += new System.EventHandler(this.TakePayment);
             // 
             // panel2
             // 

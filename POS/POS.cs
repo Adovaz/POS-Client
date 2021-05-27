@@ -20,7 +20,16 @@ namespace POS
             sale.Dock = DockStyle.Fill;
             Sales_Pnl.Controls.Add(sale);
         }
+
+        public void newSale()
+        {
+            Sales_Pnl.Controls.Clear();
+            Sale sale = new Sale();
+            sale.Dock = DockStyle.Fill;
+            Sales_Pnl.Controls.Add(sale);
+        }
     }
+
     public class Globals
     {
         public static int branchID = 1;

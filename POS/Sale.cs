@@ -79,7 +79,7 @@ namespace POS
         }
 
         //On complete sale button, 
-        private void CompleteSale(object sender, EventArgs e)
+        private void TakePayment(object sender, EventArgs e)
         {
             UpdateTotal();
             if (Total != 0)
@@ -93,6 +93,23 @@ namespace POS
                 MessageBox.Show("No items to process", "ERROR");
             }
         }
+
+        public void CompleteSale(MoneyIn moneyIn)
+        {
+            if(moneyIn.current_due == 0)
+            {
+
+            }
+            else if(moneyIn.current_due < 0)
+            {
+
+            }
+            else if(moneyIn.current_due > 0)
+            {
+                 MessageBox.Show("This Sale has not be paid fully");
+            }
+        }
+
 
         //Public variable for the current sale
         public double Total

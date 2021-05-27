@@ -42,6 +42,7 @@ namespace POS
             this.btn_method.TabIndex = 0;
             this.btn_method.Text = "method";
             this.btn_method.UseVisualStyleBackColor = true;
+            this.btn_method.Click += new System.EventHandler(this.btn_method_Click);
             // 
             // txtBx_payment_method
             // 
