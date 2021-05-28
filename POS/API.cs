@@ -41,5 +41,28 @@ namespace POS
 
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
         }
+
+        //
+        public static void SubmitTrans()
+        {
+            var request = (HttpWebRequest)WebRequest.Create("http://localhost/transactions/new");
+
+            var postData = "thing1=" + Uri.EscapeDataString("hello");
+            postData += "&thing2=" + Uri.EscapeDataString("world");
+            var data = Encoding.ASCII.GetBytes(postData);
+
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = data.Length;
+
+            using (var stream = request.GetRequestStream())
+            {
+                stream.Write(data, 0, data.Length);
+            }
+
+            var response = (HttpWebResponse)request.GetResponse();
+
+            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+        }
     }
 }

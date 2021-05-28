@@ -97,8 +97,15 @@ namespace POS
         public TransactionPostJson createTransactionPost()
         {
             TransactionPostJson ret = new TransactionPostJson();
+            for (int i = 0; i > pnl_items.Controls.Count; i++)
+            {
+                SaleItem item = (SaleItem)pnl_items.Controls[i];
+                TransContent tmp = new TransContent();
+                tmp.product_variation_id = item.productAttatched.id;
+                tmp.quantity = item.quantity;
+                ret.contents[i] = tmp;
+            }
             return ret;
-             
         }
 
         public void CompleteSale(MoneyIn moneyIn)

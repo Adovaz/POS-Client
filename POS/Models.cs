@@ -52,6 +52,11 @@ namespace POS
         public Array quantities;
     }
 
+    public class TransContent
+    {
+        public int product_variation_id;
+        public int quantity;
+    }
     public class TransactionPostJson
     {
         public double total;
@@ -69,7 +74,7 @@ namespace POS
             mastercard,
             giftcard,
         }
-        public Array contents;
+        public TransContent[] contents;
     }
 
     public class SaleObj
