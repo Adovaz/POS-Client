@@ -60,20 +60,20 @@ namespace POS
     public class TransactionPostJson
     {
         public double total;
-        public enum transaction_type
-        {
+        public string transaction_type;
+    /*    {
             sale,
             deposit,
             finalise,
-        }
-        public enum payment_method
-        {
+        }*/
+        public string payment_method;
+        /*{
             cash,
             debit,
             eftpos,
             mastercard,
             giftcard,
-        }
+        }*/
         public TransContent[] contents;
     }
 

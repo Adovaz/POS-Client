@@ -47,6 +47,7 @@ namespace POS
             // txtBx_payment_method
             // 
             this.txtBx_payment_method.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtBx_payment_method.Enabled = false;
             this.txtBx_payment_method.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBx_payment_method.Location = new System.Drawing.Point(306, 0);
             this.txtBx_payment_method.Name = "txtBx_payment_method";

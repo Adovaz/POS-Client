@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace POS
 {
@@ -94,18 +95,22 @@ namespace POS
             }
         }
 
-        public TransactionPostJson createTransactionPost()
+        public string CreateTransactionJson(string pay_method)
         {
-            TransactionPostJson ret = new TransactionPostJson();
+            TransactionPostJson obj = new TransactionPostJson();
             for (int i = 0; i > pnl_items.Controls.Count; i++)
             {
                 SaleItem item = (SaleItem)pnl_items.Controls[i];
                 TransContent tmp = new TransContent();
                 tmp.product_variation_id = item.productAttatched.id;
                 tmp.quantity = item.quantity;
-                ret.contents[i] = tmp;
+                obj.contents[i] = tmp;
             }
-            return ret;
+            obj.transaction_type = "sale";
+            obj.payment_method = pay_method;
+            obj.total = Total;
+
+            return JsonConvert.SerializeObject(obj);
         }
 
         public void CompleteSale(MoneyIn moneyIn)

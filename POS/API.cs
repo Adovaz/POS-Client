@@ -25,6 +25,25 @@ namespace POS
                 return reader.ReadToEnd();
             }
         }
+        public static string Post(string uri, string postData)
+        {
+            var request = (HttpWebRequest)WebRequest.Create(uri);
+
+            var data = Encoding.ASCII.GetBytes(postData);
+
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentLength = data.Length;
+
+            using (var stream = request.GetRequestStream())
+            {
+                stream.Write(data, 0, data.Length);
+            }
+
+            var response = (HttpWebResponse)request.GetResponse();
+
+            return new StreamReader(response.GetResponseStream()).ReadToEnd();
+        }
 
         //Gets Product and Variation for a sale
         public static Tuple<ProductObj, ProductVariationObj> getItemForSale(string barcode)
@@ -45,24 +64,7 @@ namespace POS
         //
         public static void SubmitTrans()
         {
-            var request = (HttpWebRequest)WebRequest.Create("http://localhost/transactions/new");
-
-            var postData = "thing1=" + Uri.EscapeDataString("hello");
-            postData += "&thing2=" + Uri.EscapeDataString("world");
-            var data = Encoding.ASCII.GetBytes(postData);
-
-            request.Method = "POST";
-            request.ContentType = "application/x-www-form-urlencoded";
-            request.ContentLength = data.Length;
-
-            using (var stream = request.GetRequestStream())
-            {
-                stream.Write(data, 0, data.Length);
-            }
-
-            var response = (HttpWebResponse)request.GetResponse();
-
-            var responseString = new StreamReader(response.GetResponseStream()).ReadToEnd();
+           
         }
     }
 }
