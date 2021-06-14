@@ -1,25 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace POS
 {
     public partial class PaymentMethod : UserControl
     {
-        public MoneyIn parent_moneyIn;
+        public MoneyIn parentMoneyIn;
 
         public PaymentMethod()
         {
             InitializeComponent();
 
         }
-        public string payment_name
+        public string name
         {
             get
             {
@@ -31,25 +24,25 @@ namespace POS
             }
         }
 
-        public double payment_box
+        public double value
         {
             get
             {
                 try
                 {
-                    double.TryParse(txtBx_payment_method.Text, out double ret);
+                    double.TryParse(txt_payed.Text, out double ret);
                     return ret;
 
                 }
                 catch
                 {
-                    MessageBox.Show("Text is not numbers","ERROR");
+                    MessageBox.Show("Text is not numbers", "ERROR");
                     return 0;
                 }
             }
             set
             {
-                txtBx_payment_method.Text = value.ToString();
+                txt_payed.Text = value.ToString();
             }
         }
 
@@ -69,12 +62,12 @@ namespace POS
 
         private void txtBx_payment_method_TextChanged(object sender, EventArgs e)
         {
-            parent_moneyIn.UpdateDue(parent_moneyIn);
+            parentMoneyIn.UpdateDue(parentMoneyIn);
         }
 
         private void btn_method_Click(object sender, EventArgs e)
         {
-            payment_box = parent_moneyIn.current_due;
+            value = parentMoneyIn.currentDue;
         }
     }
 }

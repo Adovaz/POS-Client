@@ -24,55 +24,55 @@ namespace POS
         {
             get
             {
-                return lbl_itemName.Text;
+                return lbl_name.Text;
             }
             set
             {
-                lbl_itemName.Text = value;
+                lbl_name.Text = value;
             }
         }
         public string description
         {
             get
             {
-                return lbl_desc.Text;
+                return lbl_description.Text;
             }
             set
             {
-                lbl_desc.Text = value;
+                lbl_description.Text = value;
             }
         }
         public string price
         {
             get
             {
-                return lbl_itemPrice.Text;
+                return lbl_price.Text;
             }
             set
             {
-                lbl_itemPrice.Text = "$" + value;
+                lbl_price.Text = "$" + value;
             }
         }
         public string total
         {
             get
             {
-                return lbl_totalItemPrice.Text;
+                return lbl_totalPrice.Text;
             }
             set
             {
-                lbl_totalItemPrice.Text = "$" + value;
+                lbl_totalPrice.Text = "$" + value;
             }
         }
         public int quantity
         {
             get
             {
-                return Convert.ToInt32(numUD_Quantity.Value);
+                return Convert.ToInt32(nud_quantity.Value);
             }
             set
             {
-                numUD_Quantity.Value = value;
+                nud_quantity.Value = value;
             }
         }
 

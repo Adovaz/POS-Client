@@ -18,15 +18,15 @@ namespace POS
             InitializeComponent();
             Sale sale = new Sale();
             sale.Dock = DockStyle.Fill;
-            Sales_Pnl.Controls.Add(sale);
+            pnl_sales.Controls.Add(sale);
         }
 
-        public void newSale()
+        public void NewSale()
         {
-            Sales_Pnl.Controls.Clear();
+            pnl_sales.Controls.Clear();
             Sale sale = new Sale();
             sale.Dock = DockStyle.Fill;
-            Sales_Pnl.Controls.Add(sale);
+            pnl_sales.Controls.Add(sale);
         }
     }
 
@@ -34,6 +34,6 @@ namespace POS
     {
         public static int branchID = 1;
         public static int staffID;
-        public static string remmeber_token;
+        public static string remember_token;
     }
 }

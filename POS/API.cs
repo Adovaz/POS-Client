@@ -25,6 +25,7 @@ namespace POS
                 return reader.ReadToEnd();
             }
         }
+        //Universal post function
         public static string Post(string uri, string postData)
         {
             var request = (HttpWebRequest)WebRequest.Create(uri);
@@ -46,23 +47,18 @@ namespace POS
         }
 
         //Gets Product and Variation for a sale
-        public static Tuple<ProductObj, ProductVariationObj> getItemForSale(string barcode)
+        public static Tuple<ProductObj, ProductVariationObj> GetSaleItem(string barcode)
         {
-            string variation_url = @"http://localhost/productvariations/barcode/"+barcode;
-            string tmp_json_variation = Get(variation_url);
-            ProductVariationJson tmpVariationJson = JsonConvert.DeserializeObject<ProductVariationJson>(tmp_json_variation);
-            ProductVariationObj tmpVariation = tmpVariationJson.productVariation[0];
-            
-            string product_url = @"http://localhost/products/get/"+tmpVariation.product_id;
-            string tmp_json_product = Get(product_url);
-            ProductJson tmpProductJson = JsonConvert.DeserializeObject<ProductJson>(tmp_json_product);
-            ProductObj tmpProduct = tmpProductJson.Product;
+            string variationUrl = @"http://localhost/productvariations/barcode/"+barcode;
+            ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationJson>(Get(variationUrl)).productVariation[0];  
+            string productUrl = @"http://localhost/products/get/"+tmpVariation.product_id;
+            ProductObj tmpProduct = JsonConvert.DeserializeObject<ProductJson>(Get(productUrl)).Product;
 
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
         }
 
-        //
-        public static void SubmitTrans()
+        //Submits transaction to database
+        public static void SubmitTransaction()
         {
            
         }

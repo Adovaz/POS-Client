@@ -29,35 +29,35 @@ namespace POS
         /// </summary>
         private void InitializeComponent()
         {
-            this.Sales_Pnl = new System.Windows.Forms.Panel();
-            this.Menu_Pnl = new System.Windows.Forms.Panel();
+            this.pnl_sales = new System.Windows.Forms.Panel();
+            this.pnl_menu = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // Sales_Pnl
+            // pnl_sales
             // 
-            this.Sales_Pnl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Sales_Pnl.Location = new System.Drawing.Point(630, 10);
-            this.Sales_Pnl.Name = "Sales_Pnl";
-            this.Sales_Pnl.Size = new System.Drawing.Size(611, 674);
-            this.Sales_Pnl.TabIndex = 0;
+            this.pnl_sales.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_sales.Location = new System.Drawing.Point(630, 10);
+            this.pnl_sales.Name = "pnl_sales";
+            this.pnl_sales.Size = new System.Drawing.Size(611, 674);
+            this.pnl_sales.TabIndex = 0;
             // 
-            // Menu_Pnl
+            // pnl_menu
             // 
-            this.Menu_Pnl.BackgroundImage = global::POS.Properties.Resources.under_costruction;
-            this.Menu_Pnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Menu_Pnl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Menu_Pnl.Location = new System.Drawing.Point(10, 10);
-            this.Menu_Pnl.Name = "Menu_Pnl";
-            this.Menu_Pnl.Size = new System.Drawing.Size(620, 674);
-            this.Menu_Pnl.TabIndex = 1;
+            this.pnl_menu.BackgroundImage = global::POS.Properties.Resources.under_costruction;
+            this.pnl_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_menu.Location = new System.Drawing.Point(10, 10);
+            this.pnl_menu.Name = "pnl_menu";
+            this.pnl_menu.Size = new System.Drawing.Size(620, 674);
+            this.pnl_menu.TabIndex = 1;
             // 
             // POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1251, 694);
-            this.Controls.Add(this.Sales_Pnl);
-            this.Controls.Add(this.Menu_Pnl);
+            this.Controls.Add(this.pnl_sales);
+            this.Controls.Add(this.pnl_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -71,8 +71,8 @@ namespace POS
 
         #endregion
 
-        private System.Windows.Forms.Panel Sales_Pnl;
-        private System.Windows.Forms.Panel Menu_Pnl;
+        private System.Windows.Forms.Panel pnl_sales;
+        private System.Windows.Forms.Panel pnl_menu;
     }
 }
 

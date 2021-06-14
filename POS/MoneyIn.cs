@@ -12,16 +12,16 @@ namespace POS
 {
     public partial class MoneyIn : Form
     {
-        public double current_due;
-        public Sale parent_sale;
-        public double init_due;
+        public double currentDue;
+        public Sale parentSale;
+        public double initialDue;
         public MoneyIn(double due, Sale current_sale)
         {
             InitializeComponent();
-            current_due = due;
-            init_due = due;
-            parent_sale = current_sale;
-            lbl_TotalDue.Text = "Due: " + string.Format("{0:N2}", current_sale.Total);
+            currentDue = due;
+            initialDue = due;
+            parentSale = current_sale;
+            lbl_due.Text = "Due: " + string.Format("{0:N2}", current_sale.Total);
 
             List<string> methods = new List<string>();
             methods.Add("Debit");
@@ -29,16 +29,16 @@ namespace POS
             methods.Add("Giftcard");
 
             PaymentMethod cash = new PaymentMethod();
-            cash.payment_name = "Cash: $" + string.Format("{0:N2}", Math.Round(due, 1));
-            cash.parent_moneyIn = this;
+            cash.name = "Cash: $" + string.Format("{0:N2}", Math.Round(due, 1));
+            cash.parentMoneyIn = this;
             cash.Dock = DockStyle.Top;
             pnl_payments.Controls.Add(cash);
 
             foreach (string item in methods)
             {
                 PaymentMethod newMethod = new PaymentMethod();
-                newMethod.payment_name = item;
-                newMethod.parent_moneyIn = this;
+                newMethod.name = item;
+                newMethod.parentMoneyIn = this;
                 newMethod.Dock = DockStyle.Top;
                 pnl_payments.Controls.Add(newMethod);
 
@@ -50,15 +50,15 @@ namespace POS
             double taken = 0;
             foreach (PaymentMethod payment in money.pnl_payments.Controls)
             {
-                taken += payment.payment_box;
+                taken += payment.value;
             }
-            current_due = init_due - taken;
-            lbl_TotalDue.Text = "Due: " + string.Format("{0:N2}", current_due);
+            currentDue = initialDue - taken;
+            lbl_due.Text = "Due: " + string.Format("{0:N2}", currentDue);
         }
 
         private void btn_complete_Click(object sender, EventArgs e)
         {
-            parent_sale.CompleteSale(this);
+            parentSale.CompleteSale(this);
         }
     }
 }

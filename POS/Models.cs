@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace POS
 {
+    //Classes match models in api for json converson
     public class StaffObj
     {
         public int id;

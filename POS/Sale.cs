@@ -21,7 +21,7 @@ namespace POS
         //Clears barcode box
         private void ClearButton_Click(object sender, EventArgs e)
         {
-            txtBx_Barcode.Text = "";
+            txt_barcodeInput.Text = "";
         }
 
         private void BarcodeCapture(object sender, KeyEventArgs e)
@@ -34,29 +34,28 @@ namespace POS
         {
             //Checks for enter press
             if (e.KeyChar == (char)Keys.Return)
-
             {
                 //Error catching
                 try
                 {
-                    Tuple<ProductObj, ProductVariationObj> tmpItem = API.getItemForSale(txtBx_Barcode.Text);
-                    ProductObj product = tmpItem.Item1;
-                    ProductVariationObj variation = tmpItem.Item2;
-                    txtBx_Barcode.Text = "";
-
-                    bool has_item = false;
-
+                    Tuple<ProductObj, ProductVariationObj> tmp = API.GetSaleItem(txt_barcodeInput.Text);
+                    ProductObj product = tmp.Item1;
+                    ProductVariationObj variation = tmp.Item2;
+                    txt_barcodeInput.Text = "";
+                    bool hasItem = false;
+                    //Checks for items existence 
                     foreach (SaleItem sale in pnl_items.Controls)
                     {
+                        //Increases quantity if item exists
                         if (sale.productAttatched.id == variation.id)
                         {
                             sale.quantity++;
                             UpdateTotal();
-                            has_item = true;
+                            hasItem = true;
                         }
                     }
-
-                    if (!has_item)
+                    //Creates GUI sale item
+                    if (!hasItem)
                     {
                         SaleItem item = new SaleItem();
                         item.sale = this;
@@ -73,13 +72,13 @@ namespace POS
                 }
                 catch
                 {
-                    txtBx_Barcode.Text = "";
+                    txt_barcodeInput.Text = "";
                     MessageBox.Show("No barcode found", "ERROR");
                 }
             }
         }
 
-        //On complete sale button, 
+        //On complete sale button updates total and opens MoneyIn
         private void TakePayment(object sender, EventArgs e)
         {
             UpdateTotal();
@@ -95,7 +94,8 @@ namespace POS
             }
         }
 
-        public string CreateTransactionJson(string pay_method)
+        //Wraps items into json
+        public string CreateTransactionJson()
         {
             TransactionPostJson obj = new TransactionPostJson();
             for (int i = 0; i > pnl_items.Controls.Count; i++)
@@ -107,23 +107,23 @@ namespace POS
                 obj.contents[i] = tmp;
             }
             obj.transaction_type = "sale";
-            obj.payment_method = pay_method;
             obj.total = Total;
 
             return JsonConvert.SerializeObject(obj);
         }
 
+        //On MoneyIn completed
         public void CompleteSale(MoneyIn moneyIn)
         {
-            if(moneyIn.current_due == 0)
+            if(moneyIn.currentDue == 0)
             {
 
             }
-            else if(moneyIn.current_due < 0)
+            else if(moneyIn.currentDue < 0)
             {
 
             }
-            else if(moneyIn.current_due > 0)
+            else if(moneyIn.currentDue > 0)
             {
                  MessageBox.Show("This Sale has not be paid fully");
             }
