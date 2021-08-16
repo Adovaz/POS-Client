@@ -101,7 +101,7 @@ namespace POS
             for (int i = 0; i > pnl_items.Controls.Count; i++)
             {
                 SaleItem item = (SaleItem)pnl_items.Controls[i];
-                TransContent tmp = new TransContent();
+                TransactionContent tmp = new TransactionContent();
                 tmp.product_variation_id = item.productAttatched.id;
                 tmp.quantity = item.quantity;
                 obj.contents[i] = tmp;
@@ -130,7 +130,7 @@ namespace POS
         }
 
 
-        //Public variable for the current sale
+        //Public variable for the total of the current sale
         public double Total
         {
             get
@@ -144,7 +144,7 @@ namespace POS
             }
             set
             {
-                lbl_total.Text = "$ " + value;
+                lbl_total.Text = "$ " + string.Format("{0:N2}", value);
             }
         }
 

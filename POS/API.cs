@@ -33,6 +33,7 @@ namespace POS
             var data = Encoding.ASCII.GetBytes(postData);
 
             request.Method = "POST";
+            request.Headers.Add("staff_id", Globals.staffID.ToString());
             request.ContentType = "application/x-www-form-urlencoded";
             request.ContentLength = data.Length;
 
@@ -60,6 +61,7 @@ namespace POS
         //Submits transaction to database
         public static void SubmitTransaction()
         {
+            string transactionURL = @"http://localhost/transactions/new";
            
         }
     }
