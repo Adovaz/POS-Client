@@ -61,20 +61,13 @@ namespace POS
 
     public class TransactionPostJson
     {
-        public double total;
+        public string total;
+        public string staff_id;
         public string transaction_type;
     /*    {
             sale,
             deposit,
             finalise,
-        }*/
-        public string payment_method;
-        /*{
-            cash,
-            debit,
-            eftpos,
-            mastercard,
-            giftcard,
         }*/
         public TransactionContent[] contents;
     }

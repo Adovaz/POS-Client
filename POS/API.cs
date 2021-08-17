@@ -28,16 +28,15 @@ namespace POS
         //Universal post function
         public static string Post(string uri, string postData)
         {
-            var request = (HttpWebRequest)WebRequest.Create(uri);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
 
             var data = Encoding.ASCII.GetBytes(postData);
 
             request.Method = "POST";
-            request.Headers.Add("staff_id", Globals.staffID.ToString());
-            request.ContentType = "application/x-www-form-urlencoded";
+            request.ContentType = "application/json";
             request.ContentLength = data.Length;
 
-            using (var stream = request.GetRequestStream())
+            using (Stream stream = request.GetRequestStream())
             {
                 stream.Write(data, 0, data.Length);
             }
@@ -59,10 +58,10 @@ namespace POS
         }
 
         //Submits transaction to database
-        public static void SubmitTransaction()
+        public static void SubmitTransaction(string contents)
         {
             string transactionURL = @"http://localhost/transactions/new";
-           
+            Post(transactionURL, contents);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace POS
     public class Globals
     {
         public static int branchID = 1;
-        public static int staffID;
+        public static int staffID = 1;
         public static string remember_token;
     }
 }

@@ -98,16 +98,19 @@ namespace POS
         public string CreateTransactionJson()
         {
             TransactionPostJson obj = new TransactionPostJson();
-            for (int i = 0; i > pnl_items.Controls.Count; i++)
+            TransactionContent[] contents = new TransactionContent[32];
+            for (int i = 0; i < pnl_items.Controls.Count; i++)
             {
                 SaleItem item = (SaleItem)pnl_items.Controls[i];
                 TransactionContent tmp = new TransactionContent();
                 tmp.product_variation_id = item.productAttatched.id;
                 tmp.quantity = item.quantity;
-                obj.contents[i] = tmp;
+                contents[i] = tmp;
             }
+            obj.contents = contents;
             obj.transaction_type = "sale";
-            obj.total = Total;
+            obj.total = Total.ToString();
+            obj.staff_id = Globals.staffID.ToString();
 
             return JsonConvert.SerializeObject(obj);
         }
@@ -117,7 +120,14 @@ namespace POS
         {
             if(moneyIn.currentDue == 0)
             {
-
+                try
+                {
+                    API.SubmitTransaction(CreateTransactionJson());
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR");
+                }
             }
             else if(moneyIn.currentDue < 0)
             {

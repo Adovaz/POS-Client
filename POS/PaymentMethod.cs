@@ -47,6 +47,7 @@ namespace POS
         }
 
         private void txtBx_payment_method_KeyPress(object sender, KeyPressEventArgs e)
+            //only allow numeric
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
