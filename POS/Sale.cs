@@ -98,7 +98,7 @@ namespace POS
         public string CreateTransactionJson()
         {
             TransactionPostJson obj = new TransactionPostJson();
-            TransactionContent[] contents = new TransactionContent[32];
+            TransactionContent[] contents = new TransactionContent[pnl_items.Controls.Count];
             for (int i = 0; i < pnl_items.Controls.Count; i++)
             {
                 SaleItem item = (SaleItem)pnl_items.Controls[i];
