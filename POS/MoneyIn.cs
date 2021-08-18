@@ -15,6 +15,8 @@ namespace POS
         public double currentDue;
         public Sale parentSale;
         public double initialDue;
+
+        //initialise window
         public MoneyIn(double due, Sale current_sale)
         {
             InitializeComponent();
@@ -59,6 +61,11 @@ namespace POS
         private void btn_complete_Click(object sender, EventArgs e)
         {
             parentSale.CompleteSale(this);
+        }
+
+        private void MoneyIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parentSale.Enabled = true;
         }
     }
 }

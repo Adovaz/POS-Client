@@ -36,9 +36,10 @@ namespace POS
             // pnl_sales
             // 
             this.pnl_sales.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_sales.Location = new System.Drawing.Point(630, 10);
+            this.pnl_sales.Location = new System.Drawing.Point(840, 12);
+            this.pnl_sales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_sales.Name = "pnl_sales";
-            this.pnl_sales.Size = new System.Drawing.Size(611, 674);
+            this.pnl_sales.Size = new System.Drawing.Size(815, 830);
             this.pnl_sales.TabIndex = 0;
             // 
             // pnl_menu
@@ -46,23 +47,25 @@ namespace POS
             this.pnl_menu.BackgroundImage = global::POS.Properties.Resources.under_costruction;
             this.pnl_menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnl_menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnl_menu.Location = new System.Drawing.Point(10, 10);
+            this.pnl_menu.Location = new System.Drawing.Point(13, 12);
+            this.pnl_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_menu.Name = "pnl_menu";
-            this.pnl_menu.Size = new System.Drawing.Size(620, 674);
+            this.pnl_menu.Size = new System.Drawing.Size(827, 830);
             this.pnl_menu.TabIndex = 1;
             // 
             // POS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1251, 694);
+            this.ClientSize = new System.Drawing.Size(1668, 854);
             this.Controls.Add(this.pnl_sales);
             this.Controls.Add(this.pnl_menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "POS";
-            this.Padding = new System.Windows.Forms.Padding(10);
+            this.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
             this.Text = "POS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
@@ -70,9 +73,8 @@ namespace POS
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_sales;
         private System.Windows.Forms.Panel pnl_menu;
+        public System.Windows.Forms.Panel pnl_sales;
     }
 }
 

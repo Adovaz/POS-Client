@@ -19,14 +19,15 @@ namespace POS
             Sale sale = new Sale();
             sale.Dock = DockStyle.Fill;
             pnl_sales.Controls.Add(sale);
+            Globals.fatherForm = this;
         }
 
-        public void NewSale()
+        public static void NewSale()
         {
-            pnl_sales.Controls.Clear();
+            Globals.fatherForm.pnl_sales.Controls.Clear();
             Sale sale = new Sale();
             sale.Dock = DockStyle.Fill;
-            pnl_sales.Controls.Add(sale);
+            Globals.fatherForm.pnl_sales.Controls.Add(sale);
         }
     }
 
@@ -35,5 +36,6 @@ namespace POS
         public static int branchID = 1;
         public static int staffID = 1;
         public static string remember_token;
+        public static POS fatherForm;
     }
 }

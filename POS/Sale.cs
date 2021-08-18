@@ -123,6 +123,8 @@ namespace POS
                 try
                 {
                     API.SubmitTransaction(CreateTransactionJson());
+                    moneyIn.Close();
+                    POS.NewSale();
                 }
                 catch
                 {
@@ -131,7 +133,17 @@ namespace POS
             }
             else if(moneyIn.currentDue < 0)
             {
-
+                try
+                {
+                    MessageBox.Show("Change:" + (moneyIn.currentDue * -1));
+                    API.SubmitTransaction(CreateTransactionJson());
+                    moneyIn.Close();
+                    POS.NewSale();
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR");
+                }
             }
             else if(moneyIn.currentDue > 0)
             {

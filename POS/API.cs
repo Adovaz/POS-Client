@@ -26,6 +26,7 @@ namespace POS
             }
         }
         //Universal post function
+        //Send in json
         public static string Post(string uri, string postData)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
