@@ -64,5 +64,13 @@ namespace POS
             string transactionURL = @"http://localhost/transactions/new";
             Post(transactionURL, contents);
         }
+
+        //Gets all transactions
+        public static List<TransactionObj> Transactions()
+        {
+            string thing = Get("http://localhost/transactions/all");
+            List<TransactionObj> ret = JsonConvert.DeserializeObject<List<TransactionObj>>(Get(@"http://localhost/transactions/all"));
+            return ret;
+        } 
     }
 }

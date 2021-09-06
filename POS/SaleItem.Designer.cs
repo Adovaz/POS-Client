@@ -55,8 +55,9 @@ namespace POS
             this.panel1.Controls.Add(this.lbl_name);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 27);
+            this.panel1.Size = new System.Drawing.Size(324, 33);
             this.panel1.TabIndex = 0;
             // 
             // lbl_name
@@ -65,8 +66,9 @@ namespace POS
             this.lbl_name.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.Location = new System.Drawing.Point(0, 0);
+            this.lbl_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(242, 27);
+            this.lbl_name.Size = new System.Drawing.Size(324, 33);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "name";
             this.lbl_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,9 +77,10 @@ namespace POS
             // 
             this.panel2.Controls.Add(this.lbl_description);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(242, 0);
+            this.panel2.Location = new System.Drawing.Point(324, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 27);
+            this.panel2.Size = new System.Drawing.Size(185, 33);
             this.panel2.TabIndex = 1;
             // 
             // lbl_description
@@ -86,8 +89,9 @@ namespace POS
             this.lbl_description.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_description.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_description.Location = new System.Drawing.Point(0, 0);
+            this.lbl_description.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_description.Name = "lbl_description";
-            this.lbl_description.Size = new System.Drawing.Size(139, 27);
+            this.lbl_description.Size = new System.Drawing.Size(185, 33);
             this.lbl_description.TabIndex = 0;
             this.lbl_description.Text = "description";
             this.lbl_description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,9 +100,10 @@ namespace POS
             // 
             this.panel3.Controls.Add(this.lbl_price);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(381, 0);
+            this.panel3.Location = new System.Drawing.Point(509, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(81, 27);
+            this.panel3.Size = new System.Drawing.Size(108, 33);
             this.panel3.TabIndex = 2;
             // 
             // lbl_price
@@ -106,8 +111,9 @@ namespace POS
             this.lbl_price.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_price.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_price.Location = new System.Drawing.Point(0, 0);
+            this.lbl_price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_price.Name = "lbl_price";
-            this.lbl_price.Size = new System.Drawing.Size(81, 27);
+            this.lbl_price.Size = new System.Drawing.Size(108, 33);
             this.lbl_price.TabIndex = 0;
             this.lbl_price.Text = "$ind PRC";
             this.lbl_price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,9 +122,10 @@ namespace POS
             // 
             this.panel4.Controls.Add(this.lbl_totalPrice);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(462, 0);
+            this.panel4.Location = new System.Drawing.Point(617, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(91, 27);
+            this.panel4.Size = new System.Drawing.Size(121, 33);
             this.panel4.TabIndex = 4;
             // 
             // lbl_totalPrice
@@ -127,8 +134,9 @@ namespace POS
             this.lbl_totalPrice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_totalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_totalPrice.Location = new System.Drawing.Point(0, 0);
+            this.lbl_totalPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_totalPrice.Name = "lbl_totalPrice";
-            this.lbl_totalPrice.Size = new System.Drawing.Size(91, 27);
+            this.lbl_totalPrice.Size = new System.Drawing.Size(121, 33);
             this.lbl_totalPrice.TabIndex = 0;
             this.lbl_totalPrice.Text = "total PRC";
             this.lbl_totalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,9 +145,10 @@ namespace POS
             // 
             this.panel5.Controls.Add(this.nud_quantity);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(553, 0);
+            this.panel5.Location = new System.Drawing.Point(738, 0);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(46, 27);
+            this.panel5.Size = new System.Drawing.Size(61, 33);
             this.panel5.TabIndex = 5;
             // 
             // nud_quantity
@@ -147,8 +156,9 @@ namespace POS
             this.nud_quantity.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nud_quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nud_quantity.Location = new System.Drawing.Point(0, 0);
+            this.nud_quantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nud_quantity.Name = "nud_quantity";
-            this.nud_quantity.Size = new System.Drawing.Size(46, 29);
+            this.nud_quantity.Size = new System.Drawing.Size(61, 34);
             this.nud_quantity.TabIndex = 0;
             this.nud_quantity.ValueChanged += new System.EventHandler(this.TotalUpdate);
             // 
@@ -156,10 +166,11 @@ namespace POS
             // 
             this.panel6.Controls.Add(this.btn_delete);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(599, 0);
+            this.panel6.Location = new System.Drawing.Point(799, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(1);
-            this.panel6.Size = new System.Drawing.Size(55, 27);
+            this.panel6.Size = new System.Drawing.Size(73, 33);
             this.panel6.TabIndex = 6;
             // 
             // btn_delete
@@ -167,8 +178,9 @@ namespace POS
             this.btn_delete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_delete.Location = new System.Drawing.Point(1, 1);
+            this.btn_delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(53, 25);
+            this.btn_delete.Size = new System.Drawing.Size(71, 31);
             this.btn_delete.TabIndex = 0;
             this.btn_delete.Text = "x";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -176,7 +188,7 @@ namespace POS
             // 
             // SaleItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
@@ -185,8 +197,9 @@ namespace POS
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SaleItem";
-            this.Size = new System.Drawing.Size(654, 27);
+            this.Size = new System.Drawing.Size(872, 33);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -26,15 +26,13 @@ namespace POS
             lbl_due.Text = "Due: " + string.Format("{0:N2}", current_sale.Total);
 
             List<string> methods = new List<string>();
-            methods.Add("Debit");
-            methods.Add("Eftpos");
-            methods.Add("Giftcard");
+            methods.Add("Payment");
 
-            PaymentMethod cash = new PaymentMethod();
+/*            PaymentMethod cash = new PaymentMethod();
             cash.name = "Cash: $" + string.Format("{0:N2}", Math.Round(due, 1));
             cash.parentMoneyIn = this;
             cash.Dock = DockStyle.Top;
-            pnl_payments.Controls.Add(cash);
+            pnl_payments.Controls.Add(cash);*/
 
             foreach (string item in methods)
             {

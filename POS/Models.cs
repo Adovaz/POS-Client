@@ -32,6 +32,11 @@ namespace POS
         public ProductVariationObj[] productVariation;
     }
 
+    public class ProductJson
+    {
+        public ProductObj Product;
+    }
+
     public class ProductObj
     {
         public int id;
@@ -41,17 +46,16 @@ namespace POS
         public string description;
     }
 
-    public class ProductJson
-    {
-        public ProductObj Product;
-    }
-
     public class TransactionObj
     {
+        public int id;
         public int staff_id;
-        public Array product_variaiton_id;
-        public Array quantities;
+        public double total;
+        public string transaction_type;
+        public DateTime created_at;
     }
+
+
 
     public class TransactionContent
     {

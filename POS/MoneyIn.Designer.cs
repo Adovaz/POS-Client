@@ -52,17 +52,17 @@ namespace POS
             // 
             this.pnl_payments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_payments.Location = new System.Drawing.Point(0, 52);
-            this.pnl_payments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_payments.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_payments.Name = "pnl_payments";
-            this.pnl_payments.Size = new System.Drawing.Size(604, 475);
+            this.pnl_payments.Size = new System.Drawing.Size(604, 138);
             this.pnl_payments.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btn_complete);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 527);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(0, 190);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(604, 123);
             this.panel1.TabIndex = 3;
@@ -83,11 +83,11 @@ namespace POS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 650);
+            this.ClientSize = new System.Drawing.Size(604, 313);
             this.Controls.Add(this.pnl_payments);
             this.Controls.Add(this.lbl_due);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MoneyIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MoneyIn";
