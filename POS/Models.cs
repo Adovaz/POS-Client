@@ -79,7 +79,7 @@ namespace POS
     public class SaleObj
     {
         public int transaction_id;
-        public int variation;
+        public int product_variation_id;
         public int quantity;
     }
 }

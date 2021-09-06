@@ -47,6 +47,11 @@ namespace POS
         {
             NewSaleHistory();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
     public class Globals

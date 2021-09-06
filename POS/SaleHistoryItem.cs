@@ -51,5 +51,11 @@ namespace POS
                 lbl_time.Text = value.ToString();
             }
         }
+
+        private void btn_contents_Click(object sender, EventArgs e)
+        {
+            SaleContents contents = new SaleContents(transaction.id);
+            contents.Show();
+        }
     }
 }

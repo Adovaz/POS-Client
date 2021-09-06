@@ -77,6 +77,18 @@
     <Compile Include="Sale.Designer.cs">
       <DependentUpon>Sale.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleContentsItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SaleContentsItem.Designer.cs">
+      <DependentUpon>SaleContentsItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleContents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleContents.Designer.cs">
+      <DependentUpon>SaleContents.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaleHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     </Compile>
     <EmbeddedResource Include="Sale.resx">
       <DependentUpon>Sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleContentsItem.resx">
+      <DependentUpon>SaleContentsItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleContents.resx">
+      <DependentUpon>SaleContents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaleHistory.resx">
       <DependentUpon>SaleHistory.cs</DependentUpon>

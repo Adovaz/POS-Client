@@ -58,6 +58,17 @@ namespace POS
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
         }
 
+        //Gets Product and Variation 
+        public static Tuple<ProductObj, ProductVariationObj> GetProduct(int id)
+        {
+            ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationObj>(Get(@"http://localhost/productvariations/get/" + id.ToString()));
+            string productUrl = @"http://localhost/products/get/" + tmpVariation.product_id;
+            ProductObj tmpProduct = JsonConvert.DeserializeObject<ProductJson>(Get(productUrl)).Product;
+
+            return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
+        }
+
+
         //Submits transaction to database
         public static void SubmitTransaction(string contents)
         {
@@ -68,9 +79,15 @@ namespace POS
         //Gets all transactions
         public static List<TransactionObj> Transactions()
         {
-            string thing = Get("http://localhost/transactions/all");
             List<TransactionObj> ret = JsonConvert.DeserializeObject<List<TransactionObj>>(Get(@"http://localhost/transactions/all"));
             return ret;
         } 
+
+        //Gets sales from transaction (contents of sale)
+         public static List<SaleObj> SalesbyTransaction(int id)
+        {
+            List<SaleObj> ret = JsonConvert.DeserializeObject<List<SaleObj>>(Get(@"http://localhost/transactions/sale/" + id));
+            return ret;
+        }
     }
 }

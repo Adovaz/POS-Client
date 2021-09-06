@@ -67,6 +67,7 @@ namespace POS
             this.btn_contents.TabIndex = 3;
             this.btn_contents.Text = "Contents";
             this.btn_contents.UseVisualStyleBackColor = true;
+            this.btn_contents.Click += new System.EventHandler(this.btn_contents_Click);
             // 
             // lbl_time
             // 
