@@ -18,6 +18,8 @@ namespace POS
         }
         public TransactionObj transaction;
 
+        //Public variables for changing labels
+
         public int staffID
         {
             get
@@ -52,6 +54,7 @@ namespace POS
             }
         }
 
+        //Creates contents form
         private void btn_contents_Click(object sender, EventArgs e)
         {
             SaleContents contents = new SaleContents(transaction.id);

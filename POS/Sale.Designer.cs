@@ -93,7 +93,7 @@ namespace POS
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.panel1.Padding = new System.Windows.Forms.Padding(10);
             this.panel1.Size = new System.Drawing.Size(605, 599);
             this.panel1.TabIndex = 2;
             // 
@@ -303,7 +303,6 @@ namespace POS
             this.Controls.Add(this.Sale_Label);
             this.Name = "Sale";
             this.Size = new System.Drawing.Size(605, 674);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeCapture);
             this.panel1.ResumeLayout(false);
             this.Panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

@@ -16,24 +16,22 @@ namespace POS
         public Sale parentSale;
         public double initialDue;
 
-        //initialise window
+        //initialise window 
         public MoneyIn(double due, Sale current_sale)
         {
             InitializeComponent();
+            //Set Variables needed locally
             currentDue = due;
             initialDue = due;
             parentSale = current_sale;
+            //Sets label to ammount due
             lbl_due.Text = "Due: " + string.Format("{0:N2}", current_sale.Total);
 
+            //Allows for multiple different playment methods if needed
             List<string> methods = new List<string>();
             methods.Add("Payment");
 
-/*            PaymentMethod cash = new PaymentMethod();
-            cash.name = "Cash: $" + string.Format("{0:N2}", Math.Round(due, 1));
-            cash.parentMoneyIn = this;
-            cash.Dock = DockStyle.Top;
-            pnl_payments.Controls.Add(cash);*/
-
+            //Create and initiallises each payment method in list, sets variables ect.
             foreach (string item in methods)
             {
                 PaymentMethod newMethod = new PaymentMethod();
@@ -45,6 +43,7 @@ namespace POS
             }
         }
 
+        //Updates due to correct format 
         public void UpdateDue(MoneyIn money)
         {
             double taken = 0;
@@ -56,11 +55,13 @@ namespace POS
             lbl_due.Text = "Due: " + string.Format("{0:N2}", currentDue);
         }
 
+        //On complete, runs Complete sale function in parent sale
         private void btn_complete_Click(object sender, EventArgs e)
         {
             parentSale.CompleteSale(this);
         }
 
+        //Enables Parent form when closing
         private void MoneyIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             parentSale.Enabled = true;

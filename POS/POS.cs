@@ -15,6 +15,7 @@ namespace POS
     {
         public POS()
         {
+            //Initiallisesmain form and adds new sale as default 
             InitializeComponent();
             Sale sale = new Sale();
             sale.Dock = DockStyle.Fill;
@@ -22,6 +23,7 @@ namespace POS
             Globals.fatherForm = this;
         }
 
+        //Creates a new sale in main panel
         public static void NewSale()
         {
             Globals.fatherForm.pnl_main.Controls.Clear();
@@ -30,6 +32,7 @@ namespace POS
             Globals.fatherForm.pnl_main.Controls.Add(sale);
         }
 
+        //Created a new Sale history in main panel
         public static void NewSaleHistory()
         {
             Globals.fatherForm.pnl_main.Controls.Clear();
@@ -38,6 +41,7 @@ namespace POS
             Globals.fatherForm.pnl_main.Controls.Add(saleHistory);
         }
 
+        //handles button clicks for changing main panel
         private void btn_new_sale_Click(object sender, EventArgs e)
         {
             NewSale();
@@ -48,12 +52,14 @@ namespace POS
             NewSaleHistory();
         }
 
+        //Closes form
         private void btn_exit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
 
+    //Globally available vairables
     public class Globals
     {
         public static int branchID = 1;

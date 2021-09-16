@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace POS
 {
     //Classes match models in api for json converson
+
     public class StaffObj
     {
         public int id;
@@ -27,16 +28,6 @@ namespace POS
         public string barcode_2;
     }
     
-    public class ProductVariationJson
-    {
-        public ProductVariationObj[] productVariation;
-    }
-
-    public class ProductJson
-    {
-        public ProductObj Product;
-    }
-
     public class ProductObj
     {
         public int id;
@@ -55,25 +46,11 @@ namespace POS
         public DateTime created_at;
     }
 
-
-
+    //Needed as are stored as nested lists
     public class TransactionContent
     {
         public int product_variation_id;
         public int quantity;
-    }
-
-    public class TransactionPostJson
-    {
-        public string total;
-        public string staff_id;
-        public string transaction_type;
-    /*    {
-            sale,
-            deposit,
-            finalise,
-        }*/
-        public TransactionContent[] contents;
     }
 
     public class SaleObj
@@ -82,4 +59,25 @@ namespace POS
         public int product_variation_id;
         public int quantity;
     }
+
+    //Models for converting json to c# obj correctly
+    //--------------------------------------------------------------------------
+    public class ProductVariationJson
+    {
+        public ProductVariationObj[] productVariation;
+    }
+
+    public class ProductJson
+    {
+        public ProductObj Product;
+    }
+
+    public class TransactionPostJson
+    {
+        public string total;
+        public string staff_id;
+        public string transaction_type;//defaults to sale
+        public TransactionContent[] contents;
+    }
+
 }

@@ -16,8 +16,10 @@ namespace POS
         {
             List<SaleObj> sales = API.SalesbyTransaction(TransactionID);
             InitializeComponent();
+            //Creates and initialises each sale item
             foreach (SaleObj sale in sales)
             {
+                //Retrieve Products from api
                 Tuple<ProductObj, ProductVariationObj> tmp = API.GetProduct(sale.product_variation_id);
                 ProductObj product = tmp.Item1;
                 ProductVariationObj variation = tmp.Item2;

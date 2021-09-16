@@ -18,6 +18,7 @@ namespace POS
             InitializeComponent();
             //Get all transactions
             List<TransactionObj> transactions = API.Transactions();
+            //Creates and initialises Sale History items
             foreach (TransactionObj transaction in transactions)
             {
                 SaleHistoryItem item = new SaleHistoryItem();

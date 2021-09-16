@@ -26,7 +26,7 @@ namespace POS
 
         private void BarcodeCapture(object sender, KeyEventArgs e)
         {
-            //txtBx_Barcode.Text = txtBx_Barcode.Text + e.KeyCode.ToString();
+            //Can't remove this or else everything breaks
         }
 
         //Adds item on enter
@@ -38,6 +38,7 @@ namespace POS
                 //Error catching
                 try
                 {
+                    //Retreives item from API and resets textbox
                     Tuple<ProductObj, ProductVariationObj> tmp = API.GetSaleItem(txt_barcodeInput.Text);
                     ProductObj product = tmp.Item1;
                     ProductVariationObj variation = tmp.Item2;
@@ -115,7 +116,7 @@ namespace POS
             return JsonConvert.SerializeObject(obj);
         }
 
-        //On MoneyIn completed
+        //On MoneyIn completed checks ammount due and acts accordingly
         public void CompleteSale(MoneyIn moneyIn)
         {
             if(moneyIn.currentDue == 0)

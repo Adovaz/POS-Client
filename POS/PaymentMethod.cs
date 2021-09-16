@@ -12,6 +12,7 @@ namespace POS
             InitializeComponent();
 
         }
+        //Variables for public access
         public string name
         {
             get
@@ -46,6 +47,7 @@ namespace POS
             }
         }
 
+        //Checks for incorrect user formatting
         private void txtBx_payment_method_KeyPress(object sender, KeyPressEventArgs e)
             //only allow numeric
         {
@@ -61,11 +63,13 @@ namespace POS
             }
         }
 
+        //Updates the amount due on text change
         private void txtBx_payment_method_TextChanged(object sender, EventArgs e)
         {
             parentMoneyIn.UpdateDue(parentMoneyIn);
         }
 
+        //Autofill Payment
         private void btn_method_Click(object sender, EventArgs e)
         {
             value = parentMoneyIn.currentDue;

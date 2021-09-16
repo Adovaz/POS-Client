@@ -26,7 +26,8 @@ namespace POS
             }
         }
         //Universal post function
-        //Send in json
+        //Sends in json!!
+        //Accept Url and data in string
         public static string Post(string uri, string postData)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
@@ -50,9 +51,13 @@ namespace POS
         //Gets Product and Variation for a sale
         public static Tuple<ProductObj, ProductVariationObj> GetSaleItem(string barcode)
         {
+            //Set Url
             string variationUrl = @"http://localhost/productvariations/barcode/"+barcode;
-            ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationJson>(Get(variationUrl)).productVariation[0];  
+            //Conver Json
+            ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationJson>(Get(variationUrl)).productVariation[0];
+            //Set Url
             string productUrl = @"http://localhost/products/get/"+tmpVariation.product_id;
+            //Conver Json
             ProductObj tmpProduct = JsonConvert.DeserializeObject<ProductJson>(Get(productUrl)).Product;
 
             return new Tuple<ProductObj, ProductVariationObj>(tmpProduct, tmpVariation);
