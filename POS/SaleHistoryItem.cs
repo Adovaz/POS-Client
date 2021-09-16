@@ -48,7 +48,7 @@ namespace POS
             }
             set
             {
-                lbl_time.Text = value.ToString();
+                lbl_time.Text = value.ToLocalTime().ToString();
             }
         }
 
