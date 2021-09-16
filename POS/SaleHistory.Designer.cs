@@ -47,8 +47,9 @@ namespace POS
             this.lbl_sale_history.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbl_sale_history.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sale_history.Location = new System.Drawing.Point(0, 0);
+            this.lbl_sale_history.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_sale_history.Name = "lbl_sale_history";
-            this.lbl_sale_history.Size = new System.Drawing.Size(807, 92);
+            this.lbl_sale_history.Size = new System.Drawing.Size(605, 75);
             this.lbl_sale_history.TabIndex = 0;
             this.lbl_sale_history.Text = "History";
             this.lbl_sale_history.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,19 +59,22 @@ namespace POS
             this.pnl_history_parent.Controls.Add(this.pnl_history_main);
             this.pnl_history_parent.Controls.Add(this.panel1);
             this.pnl_history_parent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_history_parent.Location = new System.Drawing.Point(0, 92);
+            this.pnl_history_parent.Location = new System.Drawing.Point(0, 75);
+            this.pnl_history_parent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_history_parent.Name = "pnl_history_parent";
-            this.pnl_history_parent.Padding = new System.Windows.Forms.Padding(13, 12, 13, 12);
-            this.pnl_history_parent.Size = new System.Drawing.Size(807, 738);
+            this.pnl_history_parent.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.pnl_history_parent.Size = new System.Drawing.Size(605, 599);
             this.pnl_history_parent.TabIndex = 1;
             // 
             // pnl_history_main
             // 
+            this.pnl_history_main.AutoScroll = true;
             this.pnl_history_main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_history_main.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_history_main.Location = new System.Drawing.Point(13, 55);
+            this.pnl_history_main.Location = new System.Drawing.Point(10, 45);
+            this.pnl_history_main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl_history_main.Name = "pnl_history_main";
-            this.pnl_history_main.Size = new System.Drawing.Size(781, 671);
+            this.pnl_history_main.Size = new System.Drawing.Size(585, 544);
             this.pnl_history_main.TabIndex = 1;
             // 
             // panel1
@@ -81,18 +85,20 @@ namespace POS
             this.panel1.Controls.Add(this.lbl_total);
             this.panel1.Controls.Add(this.lbl_staff_id);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(13, 12);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(781, 43);
+            this.panel1.Size = new System.Drawing.Size(585, 35);
             this.panel1.TabIndex = 0;
             // 
             // lbl_contents
             // 
             this.lbl_contents.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbl_contents.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.7F);
-            this.lbl_contents.Location = new System.Drawing.Point(525, 0);
+            this.lbl_contents.Location = new System.Drawing.Point(393, 0);
+            this.lbl_contents.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_contents.Name = "lbl_contents";
-            this.lbl_contents.Size = new System.Drawing.Size(256, 43);
+            this.lbl_contents.Size = new System.Drawing.Size(192, 35);
             this.lbl_contents.TabIndex = 7;
             this.lbl_contents.Text = "Contents";
             this.lbl_contents.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,9 +107,10 @@ namespace POS
             // 
             this.lbl_time.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbl_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.7F);
-            this.lbl_time.Location = new System.Drawing.Point(325, 0);
+            this.lbl_time.Location = new System.Drawing.Point(243, 0);
+            this.lbl_time.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_time.Name = "lbl_time";
-            this.lbl_time.Size = new System.Drawing.Size(200, 43);
+            this.lbl_time.Size = new System.Drawing.Size(150, 35);
             this.lbl_time.TabIndex = 9;
             this.lbl_time.Text = "Time";
             this.lbl_time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,18 +118,20 @@ namespace POS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(631, 37);
+            this.label3.Location = new System.Drawing.Point(473, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 17);
+            this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 8;
             // 
             // lbl_total
             // 
             this.lbl_total.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbl_total.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.7F);
-            this.lbl_total.Location = new System.Drawing.Point(135, 0);
+            this.lbl_total.Location = new System.Drawing.Point(101, 0);
+            this.lbl_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(190, 43);
+            this.lbl_total.Size = new System.Drawing.Size(142, 35);
             this.lbl_total.TabIndex = 5;
             this.lbl_total.Text = "Total";
             this.lbl_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -132,20 +141,22 @@ namespace POS
             this.lbl_staff_id.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbl_staff_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.7F);
             this.lbl_staff_id.Location = new System.Drawing.Point(0, 0);
+            this.lbl_staff_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_staff_id.Name = "lbl_staff_id";
-            this.lbl_staff_id.Size = new System.Drawing.Size(135, 43);
+            this.lbl_staff_id.Size = new System.Drawing.Size(101, 35);
             this.lbl_staff_id.TabIndex = 4;
             this.lbl_staff_id.Text = "Staff_ID";
             this.lbl_staff_id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SaleHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnl_history_parent);
             this.Controls.Add(this.lbl_sale_history);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SaleHistory";
-            this.Size = new System.Drawing.Size(807, 830);
+            this.Size = new System.Drawing.Size(605, 674);
             this.pnl_history_parent.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

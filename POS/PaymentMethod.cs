@@ -42,7 +42,7 @@ namespace POS
             }
             set
             {
-                txt_payed.Text = value.ToString();
+                txt_payed.Text = string.Format("{0:N2}", value.ToString());
             }
         }
 
