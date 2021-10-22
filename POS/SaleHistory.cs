@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace POS
@@ -24,7 +17,7 @@ namespace POS
                 SaleHistoryItem item = new SaleHistoryItem();
                 item.transaction = transaction;
                 item.total = transaction.total;
-                item.staffID= transaction.staff_id;
+                item.staffID = transaction.staff_id;
                 item.timedate = transaction.created_at;
                 item.Dock = DockStyle.Top;
                 pnl_history_main.Controls.Add(item);

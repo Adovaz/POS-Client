@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
 using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace POS
 {
@@ -119,7 +112,8 @@ namespace POS
         //On MoneyIn completed checks ammount due and acts accordingly
         public void CompleteSale(MoneyIn moneyIn)
         {
-            if(moneyIn.currentDue == 0)
+            moneyIn.UpdateDue();
+            if (moneyIn.currentDue == 0)
             {
                 try
                 {
@@ -132,7 +126,7 @@ namespace POS
                     MessageBox.Show("ERROR");
                 }
             }
-            else if(moneyIn.currentDue < 0)
+            else if (moneyIn.currentDue < 0)
             {
                 try
                 {
@@ -146,9 +140,9 @@ namespace POS
                     MessageBox.Show("ERROR");
                 }
             }
-            else if(moneyIn.currentDue > 0)
+            else if (moneyIn.currentDue > 0)
             {
-                 MessageBox.Show("This Sale has not be paid fully");
+                MessageBox.Show("This Sale has not be paid fully");
             }
         }
 

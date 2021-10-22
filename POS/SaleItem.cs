@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace POS
@@ -78,7 +71,7 @@ namespace POS
 
         //Product variaton attatched to the this item
         public ProductVariationObj productAttatched;
-        
+
         //Updates the induvidual items total
         private void TotalUpdate(object sender, EventArgs e)
         {

@@ -49,7 +49,7 @@ namespace POS
 
         //Checks for incorrect user formatting
         private void txtBx_payment_method_KeyPress(object sender, KeyPressEventArgs e)
-            //only allow numeric
+        //only allow numeric
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
@@ -66,7 +66,7 @@ namespace POS
         //Updates the amount due on text change
         private void txtBx_payment_method_TextChanged(object sender, EventArgs e)
         {
-            parentMoneyIn.UpdateDue(parentMoneyIn);
+            parentMoneyIn.UpdateDue();
         }
 
         //Autofill Payment

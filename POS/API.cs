@@ -1,12 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Newtonsoft.Json;
 
 namespace POS
 {
@@ -52,11 +49,11 @@ namespace POS
         public static Tuple<ProductObj, ProductVariationObj> GetSaleItem(string barcode)
         {
             //Set Url
-            string variationUrl = @"http://localhost/productvariations/barcode/"+barcode;
+            string variationUrl = @"http://localhost/productvariations/barcode/" + barcode;
             //Conver Json
             ProductVariationObj tmpVariation = JsonConvert.DeserializeObject<ProductVariationJson>(Get(variationUrl)).productVariation[0];
             //Set Url
-            string productUrl = @"http://localhost/products/get/"+tmpVariation.product_id;
+            string productUrl = @"http://localhost/products/get/" + tmpVariation.product_id;
             //Conver Json
             ProductObj tmpProduct = JsonConvert.DeserializeObject<ProductJson>(Get(productUrl)).Product;
 
@@ -86,10 +83,10 @@ namespace POS
         {
             List<TransactionObj> ret = JsonConvert.DeserializeObject<List<TransactionObj>>(Get(@"http://localhost/transactions/all"));
             return ret;
-        } 
+        }
 
         //Gets sales from transaction (contents of sale)
-         public static List<SaleObj> SalesbyTransaction(int id)
+        public static List<SaleObj> SalesbyTransaction(int id)
         {
             List<SaleObj> ret = JsonConvert.DeserializeObject<List<SaleObj>>(Get(@"http://localhost/transactions/sale/" + id));
             return ret;

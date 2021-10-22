@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace POS
@@ -44,10 +38,10 @@ namespace POS
         }
 
         //Updates due to correct format 
-        public void UpdateDue(MoneyIn money)
+        public void UpdateDue()
         {
             double taken = 0;
-            foreach (PaymentMethod payment in money.pnl_payments.Controls)
+            foreach (PaymentMethod payment in this.pnl_payments.Controls)
             {
                 taken += payment.value;
             }
